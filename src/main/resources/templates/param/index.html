@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+    <body>
+
+        <h1 th:text="${title}"></h1>
+
+
+        <!--    Sending String params-->
+        <h4>Sending String params</h4>
+        <li><a th:href="@{/param/string(text = 'Testeando')}" style="text-decoration-line: none">Testing params [text =
+            'Testeando']</a></li>
+        <li><a th:href="@{/param/string(text = 'It works')}" style="text-decoration-line: none">Testing params [text = 'It
+            works']</a></li>
+
+        <br>
+        <!--    Sending mix types params-->
+        <h4>Sending mix types params</h4>
+        <li><a th:href="@{/param/mix_type(text = 'I have a number', number = 2)}" style="text-decoration-line: none">Testing mix
+            params [text = 'I have a number', number = 2]</a></li>
+
+        <br>
+        <!--    Sending mix types params with request http-->
+        <h4>Sending mix types params with request http</h4>
+        <li><a th:href="@{/param/mix_type_req(text = 'I have another number', number = 1000)}" style="text-decoration-line: none">Testing mix
+            params with request http [text = 'I have another number', number = 1000]</a></li>
+    </body>
+</html>

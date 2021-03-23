@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+
+    <h1 th:text="${title}"></h1>
+
+    <p><strong>Info:</strong> to send a text through path, put there <strong>/vars/string/"text"</strong></p>
+    <li><a th:href="@{/vars/string/Holis}" style="text-decoration: none">Run here an example!</a></li>
+
+    <hr>
+
+    <p><strong>Info:</strong> to send a mix text with a number through path, put there <strong>/vars/string/"text"/"number"</strong></p>
+    <li><a th:href="@{/vars/string/Hola/2}" style="text-decoration: none">Run here an example!</a></li>
+</body>
+</html>
